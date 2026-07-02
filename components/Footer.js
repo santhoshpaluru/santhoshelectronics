@@ -60,14 +60,14 @@ export default function Footer() {
             <li className="flex items-start gap-2">
               <Phone size={15} className="mt-0.5 shrink-0 text-ink-muted" />
               <span>
-                +91 XXXXX XXXXX{' '}
+                +91 7989925530{' '}
                 <span className="text-ink-muted">(7989925530)</span>
               </span>
             </li>
             <li className="flex items-start gap-2">
               <Mail size={15} className="mt-0.5 shrink-0 text-ink-muted" />
               <span>
-                your-email@example.com{' '}
+                santhoshpaluru2006@gmail.com{' '}
                 <span className="text-ink-muted">(santhoshpaluru2006@gmail.com)</span>
               </span>
             </li>
