@@ -61,14 +61,14 @@ export default function Footer() {
               <Phone size={15} className="mt-0.5 shrink-0 text-ink-muted" />
               <span>
                 +91 XXXXX XXXXX{' '}
-                <span className="text-ink-muted">(add your number)</span>
+                <span className="text-ink-muted">(7989925530)</span>
               </span>
             </li>
             <li className="flex items-start gap-2">
               <Mail size={15} className="mt-0.5 shrink-0 text-ink-muted" />
               <span>
                 your-email@example.com{' '}
-                <span className="text-ink-muted">(add yours)</span>
+                <span className="text-ink-muted">(santhoshpaluru2006@gmail.com)</span>
               </span>
             </li>
           </ul>
