@@ -1,0 +1,69 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------
+   Design tokens — "workbench datasheet" system.
+   Grounded in real PCB colour: solder-mask green, copper trace, the cool
+   grey-blue of blueprint paper, and a signal-cyan borrowed from a
+   multimeter display. See README for the full rationale.
+   ------------------------------------------------------------------- */
+@theme {
+  --color-paper: #eef2ee;
+  --color-paper-raised: #ffffff;
+  --color-ink: #12231c;
+  --color-ink-muted: #4b5d55;
+  --color-pcb: #1b5e3a;
+  --color-pcb-dark: #0e3d26;
+  --color-copper: #b8722e;
+  --color-copper-light: #e0a05c;
+  --color-signal: #2f8fa6;
+  --color-line: #d6ded8;
+  --color-alarm: #c1442e;
+
+  /* These reference the variables next/font/google injects in layout.js —
+     keeps font loading self-hosted and optimised instead of a raw @import. */
+  --font-display: var(--font-space-grotesk), ui-sans-serif, sans-serif;
+  --font-sans: var(--font-ibm-plex-sans), ui-sans-serif, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: var(--color-pcb);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, var(--color-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-line) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
